@@ -11,7 +11,7 @@ router.get("/checkstatus", (req, res, next) => {
     res.status(200).json({ status: "success", message: "Api OK" })
 })
 //test api
-router.get("/v1/test-api", (req, res, next) => {
+router.get("/api/test-api", (req, res, next) => {
     res.status(200).json({
         status: "success",
         message: "Api OK",
