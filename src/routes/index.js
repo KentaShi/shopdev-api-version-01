@@ -6,7 +6,9 @@ const { pushToLogDiscord } = require("../middlewares")
 
 //add log to discord
 router.use(pushToLogDiscord)
-
+router.get("/checkstatus", (req, res, next) => {
+    res.status(200).json({ status: "success", message: "Api OK" })
+})
 //create api key -- test apikey
 router.use("/v1/api", require("./apikey"))
 //check api key
