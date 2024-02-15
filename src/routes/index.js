@@ -10,6 +10,19 @@ const router = require("express").Router()
 router.get("/checkstatus", (req, res, next) => {
     res.status(200).json({ status: "success", message: "Api OK" })
 })
+//test api
+router.get("/v1/test-api", (req, res, next) => {
+    res.status(200).json({
+        status: "success",
+        message: "Api OK",
+        metadata: [
+            {
+                name: "Kentanam",
+                age: 28,
+            },
+        ],
+    })
+})
 //create api key -- test apikey
 router.use("/v1/api", require("./apikey"))
 //check api key
