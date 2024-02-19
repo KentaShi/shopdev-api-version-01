@@ -23,6 +23,7 @@ router.get("/api/test-api", (req, res, next) => {
         ],
     })
 })
+router.use("/v1/api/profile", require("./profile"))
 //create api key -- test apikey
 router.use("/v1/api", require("./apikey"))
 //check api key
@@ -31,6 +32,7 @@ router.use(apikey)
 router.use(checkPermission("0000"))
 router.use("/v1/api/checkout", require("./checkout"))
 router.use("/v1/api/discount", require("./discount"))
+// router.use("/v1/api/profile", require("./profile"))
 router.use("/v1/api/inventory", require("./inventory"))
 router.use("/v1/api/product", require("./product"))
 router.use("/v1/api/upload", require("./upload"))
