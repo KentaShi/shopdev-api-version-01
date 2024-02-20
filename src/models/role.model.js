@@ -26,7 +26,7 @@ const roleSchema = new Schema(
                     ref: "Resource",
                     required: true,
                 },
-                actions: { type: String, required: true },
+                actions: [{ type: String, required: true }],
                 attributes: { type: String, default: "*" },
             },
         ],
