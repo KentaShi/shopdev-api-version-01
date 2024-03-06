@@ -7,6 +7,8 @@ const bodyParser = require("body-parser")
 const compression = require("compression")
 const app = express()
 const { checkOverload } = require("./helpers/check.connect")
+const { v4: uuidv4 } = require("uuid")
+const myLogger = require("./loggers/mylogger.log")
 
 require("dotenv").config()
 
@@ -24,6 +26,18 @@ app.use(helmet())
 app.use(compression())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+app.use((req, res, next) => {
+    const requestId = req.headers["x-request-id"]
+    req.requestId = requestId ? requestId : uuidv4()
+    myLogger.info("input params", [
+        req.path,
+        { requestId: req.requestId },
+        req.method === "POST" ? req.body : req.query,
+    ])
+    next()
+})
+
 // init db
 require("./db/init.mongodb")
 //check over load in mongodb
@@ -43,6 +57,14 @@ app.use((req, res, next) => {
 })
 app.use((error, req, res, next) => {
     const statusCode = error.status || 500
+    const message = `${error.status} - ${
+        Date.now() - error.now
+    }ms - Response: ${error.message}`
+    myLogger.error(message, [
+        req.path,
+        { requestId: req.requestId },
+        { message: error.message },
+    ])
     return res.status(statusCode).json({
         status: "error!!",
         code: statusCode,

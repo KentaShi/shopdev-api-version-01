@@ -17,12 +17,13 @@ class ErrorResponse extends Error {
     constructor(message, status) {
         super(message)
         this.status = status
+        this.now = Date.now()
 
-        myLogger.error(this.message, [
-            "/api/v1/login",
-            "id1111",
-            { error: "Bad Request error" },
-        ])
+        // myLogger.error(this.message, [
+        //     "/api/v1/login",
+        //     "id1111",
+        //     { error: "Bad Request error" },
+        // ])
     }
 }
 
@@ -76,4 +77,5 @@ module.exports = {
     AuthFailureError,
     NotFoundError,
     ForBiddenError,
+    ErrorResponse,
 }

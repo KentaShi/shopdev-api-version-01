@@ -128,7 +128,7 @@ class AccessService {
         // 1-
         const foundShop = await findByEmail({ email })
         if (!foundShop) {
-            throw new BadRequestError("Couldn't find this shop")
+            throw new BadRequestError("Wrong email...")
         }
         //2-
         const match = bcrypt.compare(password, foundShop.password)
@@ -153,6 +153,7 @@ class AccessService {
             refreshToken: tokens.refreshToken,
         })
         return {
+            code: 200,
             shop: getInfoData({
                 fields: ["_id", "email", "name"],
                 object: foundShop,
