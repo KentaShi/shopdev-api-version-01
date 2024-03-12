@@ -2,7 +2,9 @@
 
 const { randomInt } = require("crypto")
 const { newOtp } = require("./otp.service")
-const { newTemplate } = require("./template.service")
+const { newTemplate, getTemplate } = require("./template.service")
+
+const sendEmailLinkVerify = () => {}
 
 const sendEmailToken = async ({ email }) => {
     try {
@@ -10,7 +12,11 @@ const sendEmailToken = async ({ email }) => {
         const token = await newOtp({ email })
 
         // 2. get template
-        const template = await newTemplate()
+        const template = await getTemplate({
+            tem_name: "HTML EMAIL TOKEN",
+        })
+
+        // 3. send email
     } catch (error) {}
 }
 
