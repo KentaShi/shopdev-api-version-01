@@ -40,6 +40,8 @@ app.use((req, res, next) => {
 
 // init db
 require("./db/init.mongodb")
+const initRedis = require("./db/init.redis")
+initRedis.initRedis()
 //check over load in mongodb
 //checkOverload()
 
