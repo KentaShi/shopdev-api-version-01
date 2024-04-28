@@ -45,6 +45,15 @@ const updateNestedObjectParser = (obj) => {
 
 const randomIamgeName = () => crypto.randomBytes(16).toString("hex")
 
+//replacePlaceholder
+const replacePlaceholder = (template, params) => {
+    Object.keys(params).forEach((key) => {
+        const placeHolder = `{{${key}}}`
+        template = template.replace(new RegExp(placeHolder, "g"), params[key])
+    })
+    return template
+}
+
 module.exports = {
     getInfoData,
     getSelectData,
@@ -53,4 +62,5 @@ module.exports = {
     updateNestedObjectParser,
     convertToObjectIdMongodb,
     randomIamgeName,
+    replacePlaceholder,
 }

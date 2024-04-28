@@ -13,7 +13,7 @@ const templateSchema = new Schema(
         tem_html: { type: String, required: true },
     },
     {
-        collation: COLLECTION_NAME,
+        collection: COLLECTION_NAME,
         timestamps: true,
     }
 )
