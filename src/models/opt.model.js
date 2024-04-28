@@ -2,8 +2,8 @@
 
 const { model, Schema } = require("mongoose")
 
-const DOCUMENT_NAME = "otp_log"
-const COLLECTION_NAME = "otp_logs"
+const DOCUMENT_NAME = "OTPLog"
+const COLLECTION_NAME = "OTPLogs"
 
 const otpSchema = new Schema(
     {
@@ -17,7 +17,7 @@ const otpSchema = new Schema(
         expireAt: { type: Date, default: Date.now(), expires: 60 },
     },
     {
-        collation: COLLECTION_NAME,
+        collection: COLLECTION_NAME,
         timestamps: true,
     }
 )

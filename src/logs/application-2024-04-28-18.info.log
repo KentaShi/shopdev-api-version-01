@@ -1,0 +1,3 @@
+2024-04-28 06:38:48::info::/v1/api/email/new-template::390694db-f765-4442-94f5-1da1f3870b28::input params::{"tem_name":"HTML EMAIL TOKEN","tem_id":"10001"}
+2024-04-28 06:38:48::error::/v1/api/email/new-template::390694db-f765-4442-94f5-1da1f3870b28::undefined - NaNms - Response: Template validation failed: tem_status: Path `tem_status` is required.::{"message":"Template validation failed: tem_status: Path `tem_status` is required."}
+2024-04-28 06:40:31::info::/v1/api/email/new-template::f01ba7c1-cd5a-4d0b-9be7-ebf120f29de6::input params::{"tem_name":"HTML EMAIL TOKEN","tem_id":"10001"}
