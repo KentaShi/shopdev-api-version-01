@@ -50,7 +50,7 @@ class EmailService {
             }
             // 3. replace placeholder with params
             const content = replacePlaceholder(template.tem_html, {
-                link_verify: `http://localhost:3001/cgp/welcome-back?token=${otp.otp_token}`,
+                link_verify: `http://localhost:3001/v1/api/user/verify-email?token=${otp.otp_token}`,
             })
 
             // 4. send email
