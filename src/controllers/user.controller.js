@@ -9,14 +9,14 @@ class UserController {
         const response = await UserService.newUser({
             email: req.body.email,
         })
-        new SuccessResponse(response).send(res)
+        return new SuccessResponse(response).send(res)
     }
 
     //check user token via email
     checkRegisterEmailToken = async (req, res, next) => {
         const { token } = req.query
         const response = await UserService.checkRegisterEmailToken({ token })
-        new SuccessResponse(response).send(res)
+        return new SuccessResponse(response).send(res)
     }
 }
 

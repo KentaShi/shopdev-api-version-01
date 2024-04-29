@@ -7,6 +7,7 @@ class UserRepository {
         usr_id,
         usr_name,
         usr_slug,
+        usr_email,
         usr_password,
         usr_role,
     }) => {
@@ -14,6 +15,7 @@ class UserRepository {
             usr_id,
             usr_name,
             usr_slug,
+            usr_email,
             usr_password,
             usr_role,
         })

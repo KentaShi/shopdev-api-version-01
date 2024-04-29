@@ -1,0 +1,28 @@
+2024-04-29 09:33:44::info::/v1/api/user/new-user::16249bf5-556e-4bbe-9b0c-99a323d5316d::input params::{"email":"kenta.nam.97@gmail.com"}
+2024-04-29 09:33:53::info::/v1/api/user/verify-email::3afd6bb7-9d63-4319-9ecb-be7e25cd1ee0::input params::{"token":"1238115734"}
+2024-04-29 09:34:14::info::/v1/api/user/verify-email::d1967c88-6d5c-4d1f-b3da-3d564656e50b::input params::{"token":"1238115734"}
+2024-04-29 09:34:39::info::/v1/api/user/verify-email::84d97d73-db47-4820-9258-9725f3a2fb22::input params::{"token":"1238115734"}
+2024-04-29 09:34:39::error::/v1/api/user/verify-email::84d97d73-db47-4820-9258-9725f3a2fb22::undefined - NaNms - Response: Cannot destructure property 'message' of 'undefined' as it is undefined.::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2024-04-29 09:35:54::info::/v1/api/user/verify-email::e61b8a35-b7ce-451d-b450-3a51b7872f71::input params::{"token":"1238115734"}
+2024-04-29 09:35:54::error::/v1/api/user/verify-email::e61b8a35-b7ce-451d-b450-3a51b7872f71::undefined - NaNms - Response: Cannot destructure property 'message' of 'undefined' as it is undefined.::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2024-04-29 09:36:15::info::/v1/api/user/verify-email::315ee3ad-ad84-40d2-8c35-cf43333da7fa::input params::{"token":"1238115734"}
+2024-04-29 09:36:25::info::/v1/api/user/new-user::463c1de1-67fe-4553-8f94-e56a88ca98a0::input params::{"email":"kenta.nam.97@gmail.com"}
+2024-04-29 09:36:36::info::/v1/api/user/verify-email::5e838299-6c10-4c2e-9d93-80794017f1b4::input params::{"token":"3338005164"}
+2024-04-29 09:37:00::info::/v1/api/user/verify-email::1070b66e-be5c-4b0c-969a-0b92182027b6::input params::{"token":"3338005164"}
+2024-04-29 09:37:00::error::/v1/api/user/verify-email::1070b66e-be5c-4b0c-969a-0b92182027b6::undefined - NaNms - Response: Cannot destructure property 'message' of 'undefined' as it is undefined.::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2024-04-29 09:38:47::info::/v1/api/user/new-user::2feee784-4768-4c29-846f-f32af369a9e5::input params::{"email":"kenta.nam.97@gmail.com"}
+2024-04-29 09:39:02::info::/v1/api/user/verify-email::1a99c329-8e5e-49c6-aea4-02eddeca545a::input params::{"token":"240079043"}
+2024-04-29 09:39:03::error::/v1/api/user/verify-email::1a99c329-8e5e-49c6-aea4-02eddeca545a::undefined - NaNms - Response: Cannot destructure property 'message' of 'undefined' as it is undefined.::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2024-04-29 09:40:14::info::/v1/api/user/verify-email::e8cebc91-f70f-4344-ac17-c5638f48f227::input params::{"token":"240079043"}
+2024-04-29 09:40:14::error::/v1/api/user/verify-email::e8cebc91-f70f-4344-ac17-c5638f48f227::undefined - NaNms - Response: Cannot destructure property 'message' of 'undefined' as it is undefined.::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2024-04-29 09:40:21::info::/v1/api/user/new-user::857abac4-21f5-4913-bba0-e869eb81041e::input params::{"email":"kenta.nam.97@gmail.com"}
+2024-04-29 09:40:38::info::/v1/api/user/verify-email::052dfbe1-a7e0-41d0-bf57-ac514b5325d9::input params::{"token":"4273163043"}
+2024-04-29 09:40:38::error::/v1/api/user/verify-email::052dfbe1-a7e0-41d0-bf57-ac514b5325d9::undefined - NaNms - Response: Cannot destructure property 'message' of 'undefined' as it is undefined.::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2024-04-29 09:42:33::info::/v1/api/user/new-user::7997ec09-068b-4217-9a7f-26fd9131ad54::input params::{"email":"kenta.nam.97@gmail.com"}
+2024-04-29 09:42:50::info::/v1/api/user/verify-email::89dbe84d-704e-4751-a316-4ad9f4e6196d::input params::{"token":"1327215553"}
+2024-04-29 09:42:50::error::/v1/api/user/verify-email::89dbe84d-704e-4751-a316-4ad9f4e6196d::undefined - NaNms - Response: Cannot destructure property 'message' of 'undefined' as it is undefined.::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2024-04-29 09:43:45::info::/v1/api/user/new-user::4dbf296e-6d0c-4419-b411-e32c4ae80d02::input params::{"email":"kenta.nam.97@gmail.com"}
+2024-04-29 09:43:59::info::/v1/api/user/verify-email::d694bd5d-3118-424d-8db2-686f622a7aec::input params::{"token":"1147521057"}
+2024-04-29 09:43:59::error::/v1/api/user/verify-email::d694bd5d-3118-424d-8db2-686f622a7aec::undefined - NaNms - Response: Cannot destructure property 'message' of 'undefined' as it is undefined.::{"message":"Cannot destructure property 'message' of 'undefined' as it is undefined."}
+2024-04-29 09:57:41::info::/v1/api/user/new-user::f2d7f0ed-8f35-4774-b9ab-c3b160c4fdce::input params::{"email":"kenta.nam.97@gmail.com"}
+2024-04-29 09:58:02::info::/v1/api/user/verify-email::c72765d8-e641-4b4d-9538-f63ebc04ecd5::input params::{"token":"3745188089"}

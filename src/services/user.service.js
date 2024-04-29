@@ -9,6 +9,7 @@ const EmailService = require("./email.service")
 const KeyTokenService = require("./keyToken.service")
 const OTPService = require("./otp.service")
 const bcrypt = require("bcrypt")
+const crypto = require("node:crypto")
 
 class UserService {
     static newUser = async ({ email = null, capcha = null }) => {
@@ -34,10 +35,12 @@ class UserService {
             const foundUser = await UserRepository.findUserByEmail({ email })
             if (foundUser) throw new ErrorResponse("Email already exists")
 
-            const passwordHash = await bcrypt.hash(email, 10)
+            const defaultPassword = "1111"
+            const passwordHash = await bcrypt.hash(defaultPassword, 10)
             const newUser = await UserRepository.createUser({
                 usr_id: 1,
                 usr_name: email,
+                usr_email: email,
                 usr_slug: "user-slug",
                 usr_password: passwordHash,
                 usr_role: "",
@@ -70,6 +73,7 @@ class UserService {
 
                 return {
                     code: 201,
+                    message: "Verify token successfully",
                     metadata: {
                         user: getInfoData({
                             fields: ["usr_id", "usr_email", "usr_name"],
