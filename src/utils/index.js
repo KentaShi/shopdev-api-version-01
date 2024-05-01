@@ -54,6 +54,11 @@ const replacePlaceholder = (template, params) => {
     return template
 }
 
+// random ID
+const randomID = (_) => {
+    return Math.floor(Math.random() * 899999 + 100000)
+}
+
 module.exports = {
     getInfoData,
     getSelectData,
@@ -63,4 +68,5 @@ module.exports = {
     convertToObjectIdMongodb,
     randomIamgeName,
     replacePlaceholder,
+    randomID,
 }

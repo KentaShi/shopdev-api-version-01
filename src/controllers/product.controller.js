@@ -3,8 +3,73 @@
 const ProductService = require("../services/product.service")
 const ProductServiceV2 = require("../services/product.service.xxx")
 const { CREATED, SuccessResponse } = require("../core/success.response")
+const SpuService = require("../services/spu.service")
+const SkuService = require("../services/sku.service")
 
 class ProductController {
+    /* SPU, SKU */
+    /**
+     * @description create a new spu
+     * @param {*} req
+     * @param {*} res
+     * @param {*} next
+     */
+    createSpu = async (req, res, next) => {
+        try {
+            const spu = await SpuService.newSpu({
+                ...req.body,
+                product_shop: req.user.userId,
+            })
+            if (spu) {
+                new SuccessResponse({
+                    message: "Success create spu",
+                    metadata: spu,
+                }).send(res)
+            }
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    /**
+     * @description find one sku
+     * @param {*} req
+     * @param {*} res
+     * @param {*} next
+     */
+
+    findOneSku = async (req, res, next) => {
+        try {
+            const { sku_id, product_id } = req.query
+            new SuccessResponse({
+                message: "Success find one sku",
+                metadata: await SkuService.oneSku({ sku_id, product_id }),
+            }).send(res)
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    /**
+     * @description find one spu
+     * @param {*} req
+     * @param {*} res
+     * @param {*} next
+     */
+
+    findOneSpu = async (req, res, next) => {
+        try {
+            const { product_id } = req.query
+            new SuccessResponse({
+                message: "Success find one spu",
+                metadata: await SpuService.oneSpu({ spu_id: product_id }),
+            }).send(res)
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    /* END SPU, SKU */
     createProduct = async (req, res, next) => {
         // v1
         // new SuccessResponse({
