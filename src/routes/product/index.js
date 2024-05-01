@@ -10,6 +10,10 @@ router.get(
     "/search/:keySearch",
     asyncHandler(productController.getListSearchProducts)
 )
+
+router.get("/sku/select_variation", asyncHandler(productController.findOneSku))
+router.get("/spu/get_spu_info", asyncHandler(productController.findOneSpu))
+
 router.get("", asyncHandler(productController.findAllProducts))
 router.get("/:product_id", asyncHandler(productController.findProduct))
 
@@ -17,6 +21,8 @@ router.get("/:product_id", asyncHandler(productController.findProduct))
 router.use(authenticationV2)
 //create product
 router.post("/", asyncHandler(productController.createProduct))
+//create spu
+router.post("/spu/new", asyncHandler(productController.createSpu))
 //update product
 router.patch("/:productId", asyncHandler(productController.updateProduct))
 //publish a product

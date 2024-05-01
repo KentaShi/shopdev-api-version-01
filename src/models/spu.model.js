@@ -97,10 +97,10 @@ const spuSchema = new Schema(
 )
 
 //create index for searching
-productSchema.index({ product_name: "text", product_description: "text" })
+spuSchema.index({ product_name: "text", product_description: "text" })
 
 //document middleware: runs before save() and create()
-productSchema.pre("save", function (next) {
+spuSchema.pre("save", function (next) {
     this.product_slug = slugify(this.product_name, { lower: true })
     next()
 })
