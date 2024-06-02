@@ -1,1 +1,0 @@
-2024-04-28 06:38:48::error::/v1/api/email/new-template::390694db-f765-4442-94f5-1da1f3870b28::undefined - NaNms - Response: Template validation failed: tem_status: Path `tem_status` is required.::{"message":"Template validation failed: tem_status: Path `tem_status` is required."}

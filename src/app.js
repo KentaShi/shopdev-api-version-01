@@ -42,6 +42,13 @@ app.use((req, res, next) => {
 require("./db/init.mongodb")
 const initRedis = require("./db/init.redis")
 initRedis.initRedis()
+
+//init elasticsearch
+
+//init ioredis
+const ioredis = require("./db/init.ioredis")
+ioredis.init({ IOREDIS_IS_ENABLE: true })
+
 //check over load in mongodb
 //checkOverload()
 
